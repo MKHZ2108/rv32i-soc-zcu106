@@ -1,0 +1,67 @@
+PRIMITIVES_UNDER_CORE
+FDCE 1358
+FDRE 0
+FDPE 12
+FDSE 0
+LUT1 2
+LUT2 673
+LUT3 322
+LUT4 447
+LUT5 434
+LUT6 845
+CARRY8 46
+RAMD32 68
+RAMD64E 0
+SRL16E 0
+
+PIPELINE_FIELD_REGISTERS
+.*u_if_id/id_pc_reg.* 32
+.*u_if_id/id_pc_plus4_reg.* 31
+.*u_if_id/id_instr_reg.* 32
+.*u_if_id/id_fault_reg.* 1
+.*u_if_id/id_fault_cause_reg.* 1
+.*u_if_id/id_fault_tval_reg.* 0
+.*u_id_ex/ex_pc_reg.* 32
+.*u_id_ex/ex_pc_plus4_reg.* 31
+.*u_id_ex/ex_instr_reg.* 22
+.*u_id_ex/ex_fault_reg.* 1
+.*u_id_ex/ex_fault_cause_reg.* 3
+.*u_id_ex/ex_fault_tval_reg.* 32
+.*u_id_ex/ex_rs1_reg.* 5
+.*u_id_ex/ex_rs2_reg.* 0
+.*u_id_ex/ex_rd_reg.* 5
+.*u_id_ex/ex_rs1_data_reg.* 32
+.*u_id_ex/ex_rs2_data_reg.* 32
+.*u_id_ex/ex_imm_reg.* 31
+.*u_ex_mem/mem_pc_reg.* 30
+.*u_ex_mem/mem_pc_plus4_reg.* 32
+.*u_ex_mem/mem_instr_reg.* 0
+.*u_ex_mem/mem_fault_reg.* 1
+.*u_ex_mem/mem_fault_cause_reg.* 3
+.*u_ex_mem/mem_fault_tval_reg.* 33
+.*u_ex_mem/mem_rd_reg.* 5
+.*u_ex_mem/mem_alu_result_reg.* 32
+.*u_ex_mem/mem_store_data_reg.* 32
+.*u_ex_mem/mem_csr_rdata_reg.* 33
+.*u_ex_mem/mem_csr_wdata_reg.* 32
+.*u_mem_wb/wb_pc_reg.* 30
+.*u_mem_wb/wb_pc_plus4_reg.* 32
+.*u_mem_wb/wb_instr_reg.* 0
+.*u_mem_wb/wb_fault_reg.* 1
+.*u_mem_wb/wb_fault_cause_reg.* 4
+.*u_mem_wb/wb_fault_tval_reg.* 32
+.*u_mem_wb/wb_rd_reg.* 5
+.*u_mem_wb/wb_alu_result_reg.* 32
+.*u_mem_wb/wb_load_data_reg.* 32
+.*u_mem_wb/wb_csr_rdata_reg.* 32
+.*u_mem_wb/wb_csr_wdata_reg.* 32
+
+CONTROL_FANOUT
+.*flush_if_id.* nets=4 max_fanout=99
+.*flush_id_ex.* nets=3 max_fanout=7
+.*flush_ex_mem.* nets=4 max_fanout=80
+.*flush_mem_wb.* nets=4 max_fanout=18
+.*stall_if_id.* nets=0 max_fanout=0
+.*stall_id_ex.* nets=0 max_fanout=0
+.*stall_ex_mem.* nets=0 max_fanout=0
+.*stall_mem_wb.* nets=0 max_fanout=0

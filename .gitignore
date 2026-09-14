@@ -1,0 +1,44 @@
+﻿# =============================================================================
+# .gitignore for RISC-V RV32I FPGA (Vivado + Icarus Verilog)
+# =============================================================================
+
+# --- Vivado Temporary, Cache & Simulation Files ---
+**/.Xil/
+**/RISCV- RV32I.cache/
+**/RISCV- RV32I.hw/
+**/RISCV- RV32I.sim/
+**/RISCV- RV32I.ip_user_files/
+
+# --- Vivado Journals, Logs & Traces ---
+*.jou
+*.log
+*.str
+*.backup.log
+*.backup.jou
+vivado_*.str
+vivado_*.zip
+webtalk*.log
+webtalk*.jou
+
+# --- Vivado Synthesis & Implementation Runs ---
+# Bỏ qua các file checkpoint (.dcp) trung gian nặng hàng trăm MB
+**/RISCV- RV32I.runs/*
+!**/RISCV- RV32I.runs/impl_1/
+**/RISCV- RV32I.runs/impl_1/*
+# Giữ lại file Bitstream đã build sẵn để người khác có thể nạp ngay vào board
+!**/RISCV- RV32I.runs/impl_1/rv32i_bd_wrapper.bit
+!**/RISCV- RV32I.runs/impl_1/*_timing_summary_routed.rpt
+!**/RISCV- RV32I.runs/impl_1/*_utilization_placed.rpt
+
+# --- Verification & Simulation Artifacts ---
+# Bỏ qua file nhị phân iverilog sinh ra khi chạy regression
+verification/build/*.vvp
+*.vcd
+*.wdb
+
+# --- OS & Editor Generated Files ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/

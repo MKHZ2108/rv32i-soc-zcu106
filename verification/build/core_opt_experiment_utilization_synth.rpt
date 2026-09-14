@@ -1,0 +1,39 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Fri Jul 31 14:40:20 2026
+| Host         : Ngoclaptop running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 8 -file C:/Users/Dell/Desktop/RISCV_RV32I/verification/build/core_opt_experiment_utilization_synth.rpt
+| Design       : rv32i_axi_integration_top
+| Device       : xczu7ev-ffvc1156-2-e
+| Speed File   : -2
+| Design State : Synthesized
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-------------------------------+-----------------------+------------+------------+---------+------+------+--------+--------+------+------------+
+|            Instance           |         Module        | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | URAM | DSP Blocks |
++-------------------------------+-----------------------+------------+------------+---------+------+------+--------+--------+------+------------+
+| rv32i_axi_integration_top     |                 (top) |       2098 |       2058 |      40 |    0 | 1550 |      0 |      0 |    0 |          0 |
+|   (rv32i_axi_integration_top) |                 (top) |          0 |          0 |       0 |    0 |    0 |      0 |      0 |    0 |          0 |
+|   u_core                      |            rv32i_core |       2062 |       2022 |      40 |    0 | 1377 |      0 |      0 |    0 |          0 |
+|     u_mem_wb                  |            mem_wb_reg |        447 |        447 |       0 |    0 |  252 |      0 |      0 |    0 |          0 |
+|     u_csr_file                |              csr_file |          2 |          2 |       0 |    0 |  288 |      0 |      0 |    0 |          0 |
+|     u_ex_mem                  |            ex_mem_reg |        339 |        339 |       0 |    0 |  256 |      0 |      0 |    0 |          0 |
+|     u_id_ex                   |             id_ex_reg |        919 |        919 |       0 |    0 |  253 |      0 |      0 |    0 |          0 |
+|     u_if                      |              if_stage |        161 |        161 |       0 |    0 |  196 |      0 |      0 |    0 |          0 |
+|       (u_if)                  |              if_stage |        120 |        120 |       0 |    0 |  164 |      0 |      0 |    0 |          0 |
+|     u_if_id                   |             if_id_reg |        137 |        137 |       0 |    0 |  131 |      0 |      0 |    0 |          0 |
+|   u_dmem_axi                  | dmem_axi_lite_adapter |         28 |         28 |       0 |    0 |  107 |      0 |      0 |    0 |          0 |
+|   u_imem_axi                  | imem_axi_lite_adapter |          8 |          8 |       0 |    0 |   66 |      0 |      0 |    0 |          0 |
++-------------------------------+-----------------------+------------+------------+---------+------+------+--------+--------+------+------------+
+
+
